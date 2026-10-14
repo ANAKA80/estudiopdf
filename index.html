@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estúdio PDF — baixar</title>
+<meta name="description" content="Baixe o Estúdio PDF para Windows ou Mac. Editor de PDF que funciona offline.">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'self'; connect-src https://api.github.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%234657d6'/%3E%3Cpath d='M8 6h6l3 3v9H8z' fill='white'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f4f5f7; --surface: #fff; --border: #dde1e7; --text: #1c2029; --text-2: #5d6472;
+    --accent: #4657d6; --accent-hover: #3a4ac0; --accent-text: #fff; --soft: #e5e8fb;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181d; --surface: #1e2128; --border: #333844; --text: #e8eaef; --text-2: #9ca3b0;
+      --accent: #7d8cff; --accent-hover: #93a0ff; --accent-text: #0f1220; --soft: #2c3258;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 24px 16px; background: var(--bg); color: var(--text);
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main {
+    width: 100%; max-width: 520px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 32px 28px;
+  }
+  .logo { width: 48px; height: 48px; border-radius: 12px; background: var(--accent); display: grid; place-items: center; margin-bottom: 16px; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  .sub { color: var(--text-2); margin: 0 0 24px; }
+  .btn {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 14px 18px; border-radius: 12px; text-decoration: none; font-weight: 600; margin-bottom: 12px;
+    border: 1px solid var(--border); color: var(--text); background: var(--surface);
+  }
+  .btn:hover { border-color: var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  .btn.primary:hover { background: var(--accent-hover); }
+  .btn small { font-weight: 400; opacity: 0.85; }
+  .version { color: var(--text-2); font-size: 14px; margin: 4px 0 20px; min-height: 21px; }
+  details { border-top: 1px solid var(--border); padding-top: 14px; margin-top: 8px; }
+  summary { cursor: pointer; font-weight: 600; }
+  ol { padding-left: 20px; margin: 10px 0 0; color: var(--text-2); }
+  li { margin-bottom: 6px; }
+  .note { color: var(--text-2); font-size: 14px; margin: 20px 0 0; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo" aria-hidden="true">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
+  </div>
+  <h1>Estúdio PDF</h1>
+  <p class="sub">Editor de PDF que funciona offline: seus arquivos nunca saem do computador.</p>
+
+  <a id="win" class="btn primary" href="https://github.com/ANAKA80/estudio-pdf-releases/releases/latest/download/EstudioPDF-Instalador-Windows.exe">
+    Baixar para Windows <small>.exe</small>
+  </a>
+  <a id="mac" class="btn" href="https://github.com/ANAKA80/estudio-pdf-releases/releases/latest">
+    Baixar para Mac <small>.dmg</small>
+  </a>
+  <p class="version" id="version">Sempre a versão mais nova.</p>
+
+  <details>
+    <summary>Como instalar</summary>
+    <ol>
+      <li><strong>Windows:</strong> abra o arquivo baixado. Se aparecer “O Windows protegeu o computador”, clique em <em>Mais informações › Executar assim mesmo</em>.</li>
+      <li><strong>Mac:</strong> abra o .dmg e arraste o Estúdio PDF para a pasta Aplicativos. Depois, ejete o disco “Estúdio PDF” no Finder (⏏).</li>
+      <li>Depois de instalado, o app avisa sozinho quando sai versão nova.</li>
+    </ol>
+  </details>
+
+  <p class="note">Os arquivos vêm direto da <a href="https://github.com/ANAKA80/estudio-pdf-releases/releases">página oficial de versões</a>.</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
